@@ -165,17 +165,19 @@
           </select>
           <button type="button" class="search">search</button>
         </fieldset>
-        <ul class="clear">
-          <li><a href="#">
-            <img src="img/card02.png" alt="국민카드">
-          </a></li>
-          <li><a href="#">
-            <img src="img/card03.png" alt="국민카드">
-          </a></li>
-          <li><a href="#">
-            <img src="img/caard05.png" alt="국민카드">
-          </a></li>
-        </ul>
+        <div class="card-carousel" style="left: 50%; transform: translateX(-50%);">
+    
+          <div class="my-card"><img src="img/card02.png" alt="이미지에 대한 설명"></div>
+        
+          <div class="my-card"><img src="img/card03.png" alt="이미지에 대한 설명"></div>
+        
+          <div class="my-card"><img src="img/caard05.png" alt="이미지에 대한 설명"></div>
+        
+          <div class="my-card"><img src="img/card02.png" alt="이미지에 대한 설명"></div>
+        
+        
+     
+        </div>
      </div>
     </section><!--#sec03-->
     <section id="sec04">
@@ -304,7 +306,54 @@
    </form>             
   </div><!--#wrap-->
   <script src="js/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+  integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" 
+  crossorigin="anonymous">
+</script>     
+<script>
+$num = $('.my-card').length;
+$even = $num / 2;
+$odd = ($num + 1) / 2;
 
+if ($num % 2 == 0) {
+$('.my-card:nth-child(' + $even + ')').addClass('active');
+$('.my-card:nth-child(' + $even + ')').prev().addClass('prev');
+$('.my-card:nth-child(' + $even + ')').next().addClass('next');
+} else {
+$('.my-card:nth-child(' + $odd + ')').addClass('active');
+$('.my-card:nth-child(' + $odd + ')').prev().addClass('prev');
+$('.my-card:nth-child(' + $odd + ')').next().addClass('next');
+}
+
+$('.my-card').click(function() {
+$slide = $('.active').width();
+console.log($('.active').position().left);
+
+if ($(this).hasClass('next')) {
+  $('.card-carousel').stop(false, true).animate({left: '-=' + $slide});
+} else if ($(this).hasClass('prev')) {
+  $('.card-carousel').stop(false, true).animate({left: '+=' + $slide});
+}
+
+$(this).removeClass('prev next');
+$(this).siblings().removeClass('prev active next');
+
+$(this).addClass('active');
+$(this).prev().addClass('prev');
+$(this).next().addClass('next');
+});
+
+
+// Keyboard nav
+$('html body').keydown(function(e) {
+if (e.keyCode == 37) { // left
+  $('.active').prev().trigger('click');
+}
+else if (e.keyCode == 39) { // right
+  $('.active').next().trigger('click');
+}
+});
+</script>
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
@@ -346,6 +395,7 @@
         prevEl: ".swiper-button-prev",
       },
     });
+
   </script>
 </body>
 </html>
