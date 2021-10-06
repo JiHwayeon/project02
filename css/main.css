@@ -16,7 +16,7 @@ header .menubar span{display: block;
 width:35px; height:3.5px; background-color: #0d1b56;
 color: transparent; font-size: 0; margin: 5px 0;}
 header .menubar::before, header .menubar::after{content: '';
-display: block;width:35px; height: 3.5px; background-color: #0d1b56; }
+display: block;width:35px; height: 3.5px; background-color: #0d1b56;}
 
 
 #slide img{width: 100%;}
@@ -145,8 +145,15 @@ font-size: 11px; color: #747171;}
 footer p{font-size: 11px; color: #747171; padding: 10px 90px 2px ;}
 footer p:last-child{padding-top: 5px;}
 
-  
-
+:root {
+  --swiper-theme-color: #ac6be9;
+  --swiper-navigation-size: 28px;
+} 
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding: 0 0 30px;
+}
 
 
 
@@ -163,10 +170,13 @@ background-size: auto 92px;
 header .menubar{display: block; position: absolute;
 top:50px;right: 60px;}
 header .menubar span{
-width:80px; height: 8px; 
- margin: 10px 0;}
+width:36px; height: 4px; 
+ margin: 7px 0; transition: all 0.2s;}
+ header .menubar:hover span{
+   width: 50px;
+ }
 header .menubar::before, header .menubar::after{content: '';
-width:80px; height: 8px;}
+width:50px; height: 4px;}
 
 
 .slideimg{width: 160px;}
@@ -268,8 +278,14 @@ footer p{font-size: 13px; color: #747171; padding: 18px 140px 5px;}
 footer p:last-child{padding-top: 5px;}
    
 
-
-  
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: 260px;
+  left: auto;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  left: 260px;
+  right: auto;
+}  
 }
 
 
@@ -288,8 +304,8 @@ footer p:last-child{padding-top: 5px;}
 #wrap{min-width: 1400px; margin: 0 auto;}
 header{padding: 15px 75px; height: 120px; position: relative; box-shadow: 5px 5px 5px 5px rgba(0,0,0, 0.3);}
 h1 a{font-size: 0; color: transparent; 
-display: block; height: 70px; background-image: url(../img/logo.png);
-background-repeat: no-repeat; background-size:auto 70px ;}
+display: block; height: 60px; background-image: url(../img/logo.png);
+background-repeat: no-repeat; background-size:auto 60px ;}
 nav{display: block;
   position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);} 
 nav ul li{float: left; margin-right: 70px;}
@@ -303,11 +319,12 @@ nav ul li:hover a{color:royalblue ; }
 
 .submit{display: block;
   position: absolute; top:35px; right: 75px;}
-.search{ height: 65px; width: 74px; color: transparent; font-size: 0;
-background: url(../img/search.png) no-repeat; margin-right: 15px;
-background-size: auto 45px;}
-.login{height: 65px; width: 65px; color: transparent; font-size: 0;
-  background: url(../img/login.png) no-repeat;background-size: auto 45px; }
+.search{ height: 50px; width: 50px; color: transparent; font-size: 0;
+background: url(../img/search.png) no-repeat; margin-right: 0px;
+background-size: auto 25px;}
+.login{height: 50px; width: 50px; color: transparent; font-size: 0;
+  background: url(../img/login.png) no-repeat;
+  background-size: auto 25px; }
   header .menubar{display: none;}
 
  #slide{ /*height: 830px; background: url(../이미지/슬라이드-배경.png) no-repeat; */
@@ -443,9 +460,58 @@ footer .f_cor li{display: inline-block; margin-right: 10px;
 font-size: 15px; color: #747171;}
 footer p{font-size: 15px; color: #747171; padding: 40px 400px 5px;}
 footer p:last-child{padding-top: 5px;}
-   
 
-  }
+
+
+
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}  
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+}
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: 10px;
+  left: auto;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+  left: 10px;
+  right: auto;
+}
+}
 
 
 
