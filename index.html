@@ -124,9 +124,37 @@
         <a href="#" class="download">다운로드</a>
     </div><!--#slide-->
     <section id="sec01">
-      <div class="inner">
+      <div class="inner clear">
       <h3>Why Banksalad?</h3>
-        <ul class="clear">
+      <div class="tab_menu">
+      <ul class="tabs list">
+
+        <li class="tab-link current is_on" data-tab="tab-1">
+          <a href="#tab1" class="btn">Tab Button1</a>
+          <div id="tab1" class="cont">Tab Content1</div>
+        </li>
+
+        <li class="tab-link" data-tab="tab-2">
+          <a href="#tab2" class="btn">Tab Button2</a>
+          <div id="tab2" class="cont">Tab Content2</div>
+        </li>  
+        <li class="tab-link" data-tab="tab-3">SNS
+          <a href="#tab3" class="btn">Tab Button3</a>
+          <div id="tab3" class="cont">Tab Content3</div>
+        </li>  
+
+     </ul>  
+     </div>    
+      <div id="tab-1" class="tab-content current">       
+        <a href="#"><img src="img/asset.png" alt="이미지에 대한 설명"></a>
+      </div>
+       <div id="tab-2" class="tab-content">
+        <a href="#"><img src="img/cardim.png" alt="이미지에 대한 설명"></a>       
+       </div>  
+       <div id="tab-3" class="tab-content">
+        <a href="#"><img src="img/loan.png" alt="이미지에 대한 설명"></a>       
+      </div>  
+        <!-- <ul class="clear">
           <li><a href="#">
             <img src="img/sec_02.png" alt="공지사항" class="img02">
             <p class="txt01">지출현황 및 금융생활을 분석<br>해
@@ -149,7 +177,8 @@
               조회할 수 있고 카드/대출/보험<br>
               등 나에게 맞는 금융상품 추천까지</p>
           </a></li>
-        </ul>
+        </ul> -->
+      
       </div>
     </section><!--sec01-->
     <section id="sec02">
@@ -469,8 +498,32 @@ else if (e.keyCode == 39) { // right
       },
     });
 
-
     
+    
+  </script>
+  <script>
+     $('ul.tabs > li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs > li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	});
+  </script>
+  <script>
+    const tabList = document.querySelectorAll('.tab_menu .list li');
+    
+    for(var i = 0; i < tabList.length; i++){
+      tabList[i].querySelector('.btn').addEventListener('click', function(e){
+        e.preventDefault();
+        for(var j = 0; j < tabList.length; j++){
+          tabList[j].classList.remove('is_on');
+        }
+        this.parentNode.classList.add('is_on');
+      });
+    }
   </script>
 </body>
 </html>

@@ -38,7 +38,7 @@ position: absolute; top:120px; right: 90px;
 #sec01{ text-align: center;margin-bottom: 75px; }
 .inner{width: 375px; margin: 0 auto;}
 h3{font-size: 30px; margin-bottom: 45px;}
-#sec01 ul li{position: relative; width: 100%;}
+/* #sec01 ul li{position: relative; width: 100%;}
 
 #sec01 ul li a p.txt02{position: absolute; top:180px; left:200px; text-align: left;
 font-size: 13px;}
@@ -46,7 +46,7 @@ font-size: 13px;}
 
 #sec01 ul li:nth-child(1), #sec01 ul li:nth-child(3){display: none;}
 #sec01 ul li a img{box-shadow: 5px 5px 20px 6px  rgba(7,6,4,0.2) ;
-  border-radius: 40px; overflow: hidden; width:100% }
+  border-radius: 40px; overflow: hidden; width:100% } */
 
   #sec02{text-align: center;margin-bottom: 130px; }
   #sec02 ul li{position: relative; margin-bottom: 75px;}
@@ -322,7 +322,7 @@ position: absolute; top:300px; right: 220px;
 }
 h3{font-size: 50px; margin-bottom: 90px;}
 
-#sec01 ul li{float: left; margin-right: 5%; position: relative;  width: 30%; }
+/* #sec01 ul li{float: left; margin-right: 5%; position: relative;  width: 30%; }
 #sec01 ul li:last-child{margin-right: 0;}
 #sec01 ul li a img{display: block; box-shadow: 5px 5px 20px 6px  rgba(7,6,4,0.2) ;
 border-radius: 50px; overflow: hidden;}
@@ -332,7 +332,7 @@ font-size: 11px;}
 font-size: 11px;}
 #sec01 ul li a h4{font-size: 20px; position: absolute; top:40px; left: 160px;}
 
-#sec01 ul li:nth-child(1), #sec01 ul li:nth-child(3){display: block;}
+#sec01 ul li:nth-child(1), #sec01 ul li:nth-child(3){display: block;} */
 #sec02{text-align: center;margin-bottom: 130px; }
   #sec02 ul li{position: relative; margin-bottom: 133px;
   width: 100%;}
@@ -424,8 +424,64 @@ footer p:last-child{padding-top: 5px;}
   height: 350px;
 }
 
+ul.tabs > li{
+  background: none;
+  color: #222;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 20px 25px;
+}
+
+.tab_menu{position:relative;}
+.tab_menu .list{overflow:hidden;}
+/* .tab_menu .list li{float:left; margin-right:14px;} */
+.tab_menu .list .btn{font-size:13px;}
+.tab_menu .list .cont{
+  display:none; 
+  position:absolute; background:#555; 
+  color:#fff; text-align:center; 
+  width:250px; height:100px; line-height:100px;
+}
+.tab_menu .list li.is_on .btn{
+  font-weight:bold; color:green;
+}
+.tab_menu .list li.is_on .cont{
+  display:block;
+}
+ul.tabs > li.current{
+  background: #ededed;
+  color: #222;
+}
 
 
+.tab-content{
+  display: none;
+  
+ 
+}
+
+.tab-content.current{
+  display: inherit;
+}
+
+ul.tabs {
+  width: 50%;
+  float: left;
+}
+.tab-content{
+  width: 50%;
+  float: left;
+ 
+}
+.tab-content a{
+  display: block;
+}
+.tab-content a img{
+  width: 100%;
+  display: block;
+}
 }
 
 
@@ -481,16 +537,16 @@ box-shadow: 10px 10px 7px rgba(7,6,4,0.35);
 line-height: 75px; text-align: center; font-size:30px; font-weight: bold;
 position: absolute; top:600px; right: 480px;
 }
-#sec01{ text-align: center;margin-bottom: 220px;}
+/* #sec01{ text-align: center;margin-bottom: 220px;} */
 .inner{width: 1400px; margin: 0 auto;}
 h3{font-size: 60px; margin-bottom: 160px;}
 
-#sec01 ul li:last-child{margin-right: 0;}
+/* #sec01 ul li:last-child{margin-right: 0;}
 #sec01 ul li a img{display: block; box-shadow: 5px 5px 20px 6px  rgba(7,6,4,0.2) ;
 border-radius: 50px; overflow: hidden;}
 #sec01 ul li a p.txt01{position: absolute; top:200px; left:230px; text-align: left;}
 #sec01 ul li a p.txt02{position: absolute; top:280px; left:230px; text-align: left;}
-#sec01 ul li a h4{font-size: 25px; position: absolute; top:70px; left: 230px;}
+#sec01 ul li a h4{font-size: 25px; position: absolute; top:70px; left: 230px;} */
 
 #sec02{text-align: center;margin-bottom: 220px; }
 #sec02 ul li{float: left; position: relative; width: 30%; margin-right: 5%; }
@@ -664,6 +720,8 @@ footer p:last-child{padding-top: 5px;}
 .leftWrap{
   display: none;
 }
+
+
 }
 
 
