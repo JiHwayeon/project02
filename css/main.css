@@ -284,6 +284,8 @@ background-color: #fff; color: transparent; font-size: 0;}
 display: block; text-align: center; font-weight: bold;}
 
 
+
+
 @media screen and (min-width:980px) {
   #wrap{min-width:980px;margin: 0 auto;}
   .inner{width: 980px; margin: 0 auto;}
@@ -426,39 +428,85 @@ footer p:last-child{padding-top: 5px;}
 
 ul.tabs > li{
   background: none;
-  color: #222;
+  color:#fff;
   display: block;
   width: 100%;
   cursor: pointer;
   box-sizing: border-box;
   padding: 20px 25px;
+  
 }
-
-.tab_menu{position:relative;}
+ul.tabs > li:first-child{
+  margin-top: 350px;
+}
+.tab_menu{
+  position:relative;      
+  }
+  .tab_menu a.more{
+    background: url(../img/btn-rect-60.png) no-repeat;
+    display: block;
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    width: 60px; height: 60px;
+    color: #fff;
+    font-size: 40px;
+  }  
 .tab_menu .list{overflow:hidden;}
 /* .tab_menu .list li{float:left; margin-right:14px;} */
-.tab_menu .list .btn{font-size:13px;}
+.tab_menu .list .btn{
+  font-size:19px; 
+  color: #fff;
+  width: 40%;
+  display: block;
+  height: 40px;
+  border-bottom: 1px solid #fff;
+}
 .tab_menu .list .cont{
   display:none; 
-  position:absolute; background:#555; 
+  position:absolute;
+  top:0;
+
   color:#fff; text-align:center; 
-  width:250px; height:100px; line-height:100px;
+  width:400px; height:400px; 
 }
+.tab_menu .list .cont p{
+  font-size: 17px;
+  text-align: left;
+  margin: 50px 0 0 35px;
+  font-weight: normal;
+}
+.tab_menu .list .cont span{
+  font-size: 65px;
+  color: #239e9e;
+  font-weight: 900;
+  display: block;
+  margin-bottom: 25px;
+}
+
 .tab_menu .list li.is_on .btn{
-  font-weight:bold; color:green;
+  font-weight:bold; color:rgb(109, 201, 109);
 }
 .tab_menu .list li.is_on .cont{
   display:block;
 }
+ul.tabs{
+  height: 620px;
+  background-color: #009090;
+  width:50%;
+  float: left;
+  border-radius: 100px 0 100px 0;
+  margin-top: 30px;
+}
 ul.tabs > li.current{
-  background: #ededed;
+ 
   color: #222;
 }
 
 
 .tab-content{
   display: none;
-  
+ position: static; 
  
 }
 
@@ -466,10 +514,6 @@ ul.tabs > li.current{
   display: inherit;
 }
 
-ul.tabs {
-  width: 50%;
-  float: left;
-}
 .tab-content{
   width: 50%;
   float: left;
