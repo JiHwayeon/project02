@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/sub.css">
   <script src="js/html5shiv.min.js"></script>
@@ -33,40 +34,99 @@
         <button type="button" class="menubar">
           <span>menubar</span>
       </header>
-      <div id="slide">
-        <div class="inner">
-        <div class="txtbox">
-          <p class="txt1">매력넘치는 혜택들로 똘똘 뭉쳤다!</p>
-          <p class="txt2">톡톡 튀는 신상카드</p>
-        </div><!--txtbox-->
-        <div class="cardbox">
-          <p class="txt3">직장인 추천카드</p>
-          <p class="txt4">삼성카드 taptap O</p>
-          <img src="img/card06.png" alt="카드4" class="card4">
-          <div class="txtin clear">
-          <p class="txt5">2021년 뱅크샐러드 인기카드</p>
-          <a href="#">자세히 보기</a>
-          <a href="#">카드신청</a>
-         </div>
-          <ul class="clear">
-            <li><a href="#">교통, 통신 10%할인</a></li>
-            <li><a href="#">연 최대 36만원 할인</a></li>
-            <li><a href="#">쇼핑 7%할인</a></li>
-            <li><a href="#">스타벅스 50%할인</a></li>
-          </ul>
-        </div><!--cardbox-->
-        <div class="btn clear">
-          <button type="button" ><span>다음</span></button>
-          <button type="button"><span>다음</span></button>
+      <div class="swiper mySwiper01">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">  <div id="slide">
+            <div class="inner">
+            <div class="txtbox">
+              <p class="txt1">매력넘치는 혜택들로 똘똘 뭉쳤다!</p>
+              <p class="txt2">톡톡 튀는 신상카드</p>
+            </div><!--txtbox-->
+            <div class="cardbox">
+              <p class="txt3">직장인 추천카드</p>
+              <p class="txt4">삼성카드 taptap O</p>
+              <img src="img/card06.png" alt="카드4" class="card4">
+              <div class="txtin clear">
+              <p class="txt5">2021년 뱅크샐러드 인기카드</p>
+              <a href="#">자세히 보기</a>
+              <a href="#">카드신청</a>
+             </div>
+              <ul class="clear">
+                <li><a href="#">교통, 통신 10%할인</a></li>
+                <li><a href="#">연 최대 36만원 할인</a></li>
+                <li><a href="#">쇼핑 7%할인</a></li>
+                <li><a href="#">스타벅스 50%할인</a></li>
+              </ul>
+            </div><!--cardbox-->
+          
+          </div><!--.inner-->
+          </div><!--#slide--></div>
+          <div class="swiper-slide">  
+            <div id="slide">
+            <div class="inner">
+            <div class="txtbox">
+              <p class="txt1">매력넘치는 혜택들로 똘똘 뭉쳤다!</p>
+              <p class="txt2">톡톡 튀는 신상카드</p>
+            </div><!--txtbox-->
+            <div class="cardbox">
+              <p class="txt3">직장인 추천카드</p>
+              <p class="txt4">삼성카드 taptap O</p>
+              <img src="img/card06.png" alt="카드4" class="card4">
+              <div class="txtin clear">
+              <p class="txt5">2021년 뱅크샐러드 인기카드</p>
+              <a href="#">자세히 보기</a>
+              <a href="#">카드신청</a>
+             </div>
+              <ul class="clear">
+                <li><a href="#">교통, 통신 10%할인</a></li>
+                <li><a href="#">연 최대 36만원 할인</a></li>
+                <li><a href="#">쇼핑 7%할인</a></li>
+                <li><a href="#">스타벅스 50%할인</a></li>
+              </ul>
+            </div><!--cardbox-->
+          
+          </div><!--.inner-->
+          </div><!--#slide--></div>
+       
+        
         </div>
-      </div><!--.inner-->
-      </div><!--#slide-->
+        <div class="swiper-button-next slide_n"></div>
+        <div class="swiper-button-prev slide_n"></div>
+        <div class="swiper-pagination slide_p"></div>
+      </div>
+    
       <section id="sec01">
         <div class="inner">
         <h2>테마별</h2>
         <p class="txt01">취향저격 카드추천</p>
         <p class="txt02">뱅크샐러드의 금융전문가들이 엄선한 당신의 취향을 저격하는 카드를 소개합니다.</p>
-        <ul class="clear">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#">
+              <img src="img/sub_sec02_2.png" alt="편의점 할인카드">
+              <p class="txt03">편리하게 사고, 똑똑하게 할인 받는</p>
+              <p class="txt04">편의점 할인 카드</p>
+            </a>
+          </div>
+            <div class="swiper-slide"><a href="#">
+              <img src="img/sub_sec02_3.png" alt="대중교통 할인카드">
+              <p class="txt03">지하철, 버스, KTX할인이 되는</p>
+              <p class="txt04">대중교통 할인이 되는<br>
+              후불 교통카드</p>
+            </a></div>
+            <div class="swiper-slide"><a href="#">
+              <img src="img/sub_sec01.png" alt="온라인 쇼핑카드">
+              <p class="txt03">오픈마켓부터 소셜커머스까지</p>
+              <p class="txt04">온라인 쇼핑 할인카드</p>
+            </a></div>
+          
+          
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- <ul class="clear">
           <li><a href="#">
             <img src="img/sub_sec02_2.png" alt="편의점 할인카드">
             <p class="txt03">편리하게 사고, 똑똑하게 할인 받는</p>
@@ -84,7 +144,7 @@
             <p class="txt04">온라인 쇼핑 할인카드</p>
           </a></li>
 
-        </ul>
+        </ul> -->
       </div><!--inner-->
       </section><!--#sec01-->
       <section id="sec02">
@@ -226,6 +286,35 @@
       </footer>
     </form>
   </div><!--#wrap-->
-  
+  <script src="js/swiper-bundle.min.js"></script>
+  <script>
+      var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    var swiper = new Swiper(".mySwiper01", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  </script>
+
 </body>
 </html>
