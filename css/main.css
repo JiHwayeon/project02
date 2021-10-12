@@ -531,7 +531,7 @@ line-height: 60px; font-size: 18px; color: #fff;
       #sec05 h5{font-size: 30px;margin-top: 100px; }
       #sec05 p.txt01{font-size: 30px; margin-bottom: 10px;}
       #sec05 .txtbox1{padding:80px 0 0 150px; text-align: left;}
-      #sec05 p{font-size: 13px;padding-left: 20px; background: url(../img/check.png) no-repeat 5px 6px; 
+      #sec05 .txtbox1 p{font-size: 13px;padding-left: 20px; background: url(../img/check.png) no-repeat 5px 6px; 
         background-size: 11px;}
 footer{padding: 0 ; background-color: #344646; height: 260px;}
 footer .f_info{padding: 30px 130px 20px 140px; border-bottom: 1px solid #fefcfc;}
@@ -824,7 +824,7 @@ border-radius: 50%; margin: 80px auto;}
    background-size: 100px auto;
    }
    #sec05 h5{font-size: 27px; }
-   #sec05 .txtbox1{padding: 30px 0 0 10px; text-align: left;}
+   #sec05 .txtbox1{padding: 30px 0 0 90px; text-align: left;}
    #sec05 .txtbox1 p{font-size: 18px;padding-left: 20px;
      background: url(../img/check.png) no-repeat 6px 6px; 
     background-size: 13px;}
