@@ -23,13 +23,7 @@ color: transparent; font-size: 0; margin: 5px 0;}
 header .menubar::before, header .menubar::after{content: '';
 display: block;width:40px; height: 5px; background-color: #0d1b56; }
 
-.leftWrap{width:300px; height: 100%; position: fixed; top: 0; right:-300px;
-  background-color:#fff;
-  z-index: 100;}
-  .close1{display: block; width:40px ; height:40px ; border-radius: 50%; position: absolute; top: 20px;left: 20px;
-  background-color: #fff; color: transparent; font-size: 0;}
-  .close1::after{content: 'X'; font-size: 20px; color: #666; line-height: 40px;
-  display: block; text-align: center; font-weight: bold;} 
+
 #slide{width: 100%; height: 400px; background-color: #96a3b7;
 margin-bottom: 58px;}
 .txtbox{text-align: center; padding-top: 35px; }
@@ -125,14 +119,14 @@ margin-left: 10px;}
    #sec04 .inner{border-top: 1px solid #777; margin: 0 auto; position: relative; }
    #sec04 h4{font-size: 25px; color: #777 ; font-weight: normal; margin-top: 25px;
    padding-left: 0;}
-   #sec04 ul{margin-top: 60px; padding: 0;}
-   #sec04 ul li{float: left ; width: 100%; ; position: relative;}
-   #sec04 ul li:last-child{margin-right: 0;}
-   #sec04 ul li:nth-child(2), #sec04 ul li:nth-child(3), #sec04 ul li:nth-child(4){display:none;}
-   #sec04 ul li p{font-size: 16px; color: #fff;
+   #sec04 .large-12{margin-top: 40px; padding: 0;}
+   #sec04 .item{ position: relative;}
+   
+   
+   #sec04 .item p{font-size: 16px; color: #fff;
    position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);
    }
-footer{padding: 0 ; background-color: #344646; height: 170px;}
+footer{padding: 0 ; background-color: #344646; height: 200px;}
 footer .f_info{padding: 15px 0 10px 70px; border-bottom: 1px solid #fefcfc;}
 footer .f_info li{float: left; margin-right: 20px; }
 footer .f_info li:nth-child(5), footer .f_info li:nth-child(6), footer .f_info li:nth-child(7){display: none;}
@@ -146,7 +140,50 @@ footer p:last-child{padding-top: 5px;}
 :root {
   --swiper-theme-color: #6173d8;
   --swiper-navigation-size: 30px;
-}     
+} 
+.leftWrap{width:300px; height: 100%; position: fixed; top: 0; right:-300px;
+  background-color:#fff;
+  z-index: 100;}
+  .close1{display: block; width:40px ; height:40px ; border-radius: 50%; position: absolute; top: 20px;left: 20px;
+  background-color: #fff; color: transparent; font-size: 0;}
+  .close1::after{content: 'X'; font-size: 20px; color: #666; line-height: 40px;
+  display: block; text-align: center; font-weight: bold;}    
+  .menuWrap{
+    margin-top: 60px;
+    margin-left: 20px;
+  }
+  .menuWrap li a{
+    background: url(../img/arrow.png) no-repeat 120px 0;
+    background-size: 40px;
+    display: block;
+    padding: 8px;
+    font-size: 17px;
+   
+    width: 200px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .menuWrap li:hover a{
+    background-size: 60px;
+    background-position: 118px -10px;
+  }
+  .quick_menu{
+    margin-top: 25px;
+    margin-left: 80px;
+  }
+  .quick_menu .search{width: 200px;border:1px solid rgb(129, 106, 106);
+    position: relative; }
+  .quick_menu .search > input{width: 160px;height: 30px; border: none; 
+   outline: none;padding-left: 10px;}
+  .quick_menu .search > a{width: 35px; height: 30px;display:block;
+    text-indent: -999999px;background: url(../img/search.gif) no-repeat center;
+    position: absolute;top:0; right: 0;}
+  .quick_menu a.login{
+    display: block; margin-top: 20px;
+   width: 100px;height: 32px;background-color: #0052b8;
+    font-size: 14px;color: #fff;line-height: 32px;
+    text-align: center;margin-left: 10px;}
 .swiper {
   width: 100%;
   height: 100%;

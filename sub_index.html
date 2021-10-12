@@ -5,11 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/sub.css">
   <script src="js/html5shiv.min.js"></script>
   <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/owl.carousel.js"></script>
 </head>
 <body>
   <div id="wrap">
@@ -31,8 +36,46 @@
           <button type="button" class="search">search</button>
           <button type="button" class="login">login</button>
         </div>
-        <button type="button" class="menubar">
+        <button type="button" class="menubar open1">
           <span>menubar</span>
+        </button>
+        <div class="leftWrap leftWrap01">
+          <a href="#" class="close1">닫기</a>
+          <div class="quick_menu">
+            <div class="search">
+              <input type="text" placeholder="검색어를 입력해주세요.">
+              <a href="#">검색버튼</a>
+            </div>
+            <a href="#" class="login">로그인</a>
+         </div>
+          <div>
+         
+            <ul class="menuWrap clear">
+              <li><a href="#">카드</a>
+           
+              </li>
+              <li><a href="#">은행</a>
+               
+              </li>
+              <li><a href="#">투자</a>
+               
+              </li>
+              <li><a href="#">대출</a>
+               
+              </li>
+              <li><a href="#">연금</a>
+              
+              </li>
+              <li><a href="#">핀테크</a>
+              
+              </li>
+              <li><a href="#">매거진</a>
+              
+              </li>
+  
+            </ul>
+          </div>
+        </div>
       </header>
       <div class="swiper mySwiper01">
         <div class="swiper-wrapper">
@@ -69,19 +112,19 @@
               <p class="txt2">톡톡 튀는 신상카드</p>
             </div><!--txtbox-->
             <div class="cardbox">
-              <p class="txt3">직장인 추천카드</p>
-              <p class="txt4">삼성카드 taptap O</p>
-              <img src="img/card06.png" alt="카드4" class="card4">
+              <p class="txt3">무조건 할인카드</p>
+              <p class="txt4">롯데카드 LikeIt All</p>
+              <img src="img/card10.png" alt="카드4" class="card4">
               <div class="txtin clear">
               <p class="txt5">2021년 뱅크샐러드 인기카드</p>
               <a href="#">자세히 보기</a>
               <a href="#">카드신청</a>
              </div>
               <ul class="clear">
-                <li><a href="#">교통, 통신 10%할인</a></li>
-                <li><a href="#">연 최대 36만원 할인</a></li>
-                <li><a href="#">쇼핑 7%할인</a></li>
-                <li><a href="#">스타벅스 50%할인</a></li>
+                <li><a href="#">모든 가맹점 1%할인</a></li>
+                <li><a href="#">주유소/충전소 5000원 할인</a></li>
+                <li><a href="#">편의점 1000원 할인</a></li>
+                <!-- <li><a href="#">스타벅스 50%할인</a></li> -->
               </ul>
             </div><!--cardbox-->
           
@@ -225,7 +268,29 @@
       <section id="sec04">
         <div class="inner">
           <h4>'지출관리'관련 꼭 읽어야 할 글</h4>
-          <ul class="clear">
+          <div class="large-12 columns">
+           
+            <div class="loop owl-carousel owl-theme">
+              <div class="item">
+                <a href="#"><img src="img/sub_sec051.png" alt="저축을 가로막는 지출 습관 탈출"></a>
+                <p>저축을 가로막는 지출 습관 탈출</p>
+              </div>
+              <div class="item">
+                <a href="#"><img src="img/sec0502.png" alt="돈관리 습관, 바꾸기 어려운 이유"></a>
+                <p>돈관리 습관,<br> 바꾸기 어려운 이유</p>
+              </div>
+              <div class="item">
+                <a href="#"><img src="img/sec0503.png" alt="대형마트 할인카드"></a>
+                <p>대형마트 할인카드</p>
+              </div>
+              <div class="item">
+                <a href="#"><img src="img/sec0504.png" alt="주부 신용카드 추천"></a>
+                <p>대형마트 할인카드</p>
+              </div>
+            
+           
+          </div>
+          <!-- <ul class="clear">
             <li>
               <a href="#"><img src="img/sub_sec051.png" alt="저축을 가로막는 지출 습관 탈출"></a>
               <p>저축을 가로막는 지출 습관 탈출</p>
@@ -242,9 +307,10 @@
               <a href="#"><img src="img/sec0504.png" alt="주부 신용카드 추천"></a>
               <p>대형마트 할인카드</p>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </section><!--#sec04-->
+     
       <footer>
         
         <ul class="clear f_info">
@@ -315,6 +381,46 @@
     },
   });
   </script>
+   <script>
+    jQuery(document).ready(function($) {
+      $('.loop').owlCarousel({
+        center: true,
+        items: 2,
+        loop: true,
+        margin: 30,
+        responsive: {
+          600: {
+            items: 3
+          }
+        }
+      });
+      $('.nonloop').owlCarousel({
+        center: true,
+        items: 2,
+        loop: false,
+        margin: 30,
+        responsive: {
+          600: {
+            items: 3
+          }
+        }
+      });
+    });
+  </script>
+<script>
+  $(document).ready(function(){//시작
+ $(".open1").click(function(){
+ //animate({css속성 : 값 }, 시간, 움직임방식, 콜백함수)
+ //open1을 클릭하면 다음과 같은 일이 일어남
+ //leftwrap 의 css속성중에 left값이 0
+   $(".leftWrap").animate({"right":"0"},500,"swing");});
+ 
+ $(".close1").click(function(){
+   $(".leftWrap").animate({"right" : "-300px"}, 500);
+ });
 
+ });//끝
+
+</script>
 </body>
 </html>
