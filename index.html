@@ -11,21 +11,7 @@
   <script src="https://kit.fontawesome.com/fa0a0d5fbb.js" crossorigin="anonymous"></script>
   <script src="js/html5shiv.min.js"></script>
   <script src="js/jquery-3.2.1.min.js"></script>
-  <script>
-     $(document).ready(function(){//시작
-    $(".open1").click(function(){
-    //animate({css속성 : 값 }, 시간, 움직임방식, 콜백함수)
-    //open1을 클릭하면 다음과 같은 일이 일어남
-    //leftwrap 의 css속성중에 left값이 0
-      $(".leftWrap").animate({"right":"0"},500,"swing");});
-    
-    $(".close1").click(function(){
-      $(".leftWrap").animate({"right" : "-300px"}, 500);
-    });
-
-    });//끝
-
-  </script>
+ 
 </head>
 <body>
   
@@ -35,7 +21,7 @@
       <h1><a href="#">logo</a></h1>
       <nav>
        <ul class="clear">
-         <li><a href="#">카드</a></li>
+         <li><a href="sub_index.html">카드</a></li>
          <li><a href="#">은행</a></li>
          <li><a href="#">투자</a></li>
          <li><a href="#">대출</a></li>
@@ -177,10 +163,7 @@
           <p>계좌로 보낼 때<br>
             금액 넣고,
           </p>
-          <!-- <img src="img/sec02_1.png" alt="계좌송금">
-    <button type="button"><span class="on">버튼</span><span>버튼</span><span>버튼</span><span>버튼</span></button>
-    <a href="#"><b>이전</b></a>
-    <a href="#"><strong>next</strong></a> -->
+ 
      <!-- Swiper -->
      <div class="swiper mySwiper">
       <div class="swiper-wrapper">
@@ -396,122 +379,11 @@
    </form>             
   </div><!--#wrap-->
   <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
   <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
   integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" 
   crossorigin="anonymous">
 </script>      -->
-<script>
-$num = $('.my-card').length;
-$even = $num / 2;
-$odd = ($num + 1) / 2;
 
-if ($num % 2 == 0) {
-$('.my-card:nth-child(' + $even + ')').addClass('active');
-$('.my-card:nth-child(' + $even + ')').prev().addClass('prev');
-$('.my-card:nth-child(' + $even + ')').next().addClass('next');
-} else {
-$('.my-card:nth-child(' + $odd + ')').addClass('active');
-$('.my-card:nth-child(' + $odd + ')').prev().addClass('prev');
-$('.my-card:nth-child(' + $odd + ')').next().addClass('next');
-}
-
-$('.my-card').click(function() {
-$slide = $('.active').width();
-console.log($('.active').position().left);
-
-if ($(this).hasClass('next')) {
-  $('.card-carousel').stop(false, true).animate({left: '-=' + $slide});
-} else if ($(this).hasClass('prev')) {
-  $('.card-carousel').stop(false, true).animate({left: '+=' + $slide});
-}
-
-$(this).removeClass('prev next');
-$(this).siblings().removeClass('prev active next');
-
-$(this).addClass('active');
-$(this).prev().addClass('prev');
-$(this).next().addClass('next');
-});
-
-
-// Keyboard nav
-$('html body').keydown(function(e) {
-if (e.keyCode == 37) { // left
-  $('.active').prev().trigger('click');
-}
-else if (e.keyCode == 39) { // right
-  $('.active').next().trigger('click');
-}
-});
-</script>
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-    var swiper = new Swiper(".mySwiper01", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-    var swiper = new Swiper(".mySwiper02", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-
-    
-    
-  </script>
-  <script>
-     $('ul.tabs > li').click(function(){
-		var tab_id = $(this).attr('data-tab');
-
-		$('ul.tabs > li').removeClass('current');
-		$('.tab-content').removeClass('current');
-
-		$(this).addClass('current');
-		$("#"+tab_id).addClass('current');
-	});
-  </script>
-  <script>
-    const tabList = document.querySelectorAll('.tab_menu .list li');
-    
-    for(var i = 0; i < tabList.length; i++){
-      tabList[i].querySelector('.btn').addEventListener('click', function(e){
-        e.preventDefault();
-        for(var j = 0; j < tabList.length; j++){
-          tabList[j].classList.remove('is_on');
-        }
-        this.parentNode.classList.add('is_on');
-      });
-    }
-  </script>
 </body>
 </html>
